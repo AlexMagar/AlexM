@@ -1,0 +1,7 @@
+{
+    "persons":[
+        {"name":"Hari","age":"15","city":"Pokhara"},
+        {"name":"Sita","age":"25","city":"Kathmandu"},
+        {"name":"Ram","age":"22","city":"Palpa"}
+    ]
+}

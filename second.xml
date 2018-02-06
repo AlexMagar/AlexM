@@ -1,0 +1,17 @@
+<persons>
+    <person>
+        <name>Hari</name>
+        <age>15</age>
+        <city>Pokhara</city>
+    </person>
+    <person>
+        <name>Sita</name>
+        <age>25</age>
+        <city>Kathmandu</city>
+    </person>
+    <person>
+        <name>Ram</name>
+        <age>22</age>
+        <city>Palpa</city>
+    </person>
+</persons>

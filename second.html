@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Demo Here</p>
+    <p id="demo1">Demo Here</p>
+    <button onclick="loadAjax()">Json</button>
+    <button onclick="loadAjax1()">XML</button>
+    <table border="1">
+        <tr id="dataHere"></tr>
+    </table>
+    <script>
+		 function loadAjax()
+		 {
+		 	var lacche = new XMLHttpRequest;
+		 	lacche.open("GET", 'second.json', true);
+		 	lacche.send();
+		 	lacche.onreadystatechange = function(){
+		 		if (this.readyState == 4 && this.status == 200) {
+                     var person=this.responseText;
+      				document.getElementById("dataHere").innerHTML +="<td>"+person[0].name+"</td>";//this.responseText;
+		 		//	console.log(this.responseText);
+		 		}
+		 	};
+		}
+		 function loadAjax1()
+		 {
+		 	var lacche = new XMLHttpRequest;
+		 	lacche.open("GET", 'second.xml', true);
+		 	lacche.send();
+		 	lacche.onreadystatechange = function(){
+		 		if (this.readyState == 4 && this.status == 200) {
+      				document.getElementById("demo1").innerHTML = this.responseText;
+		 		//	console.log(this.responseText);
+		 		}
+		 	};
+		}
+    </script>
+</body>
+</html>

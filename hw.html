@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SearchAjax</title>
+</head>
+<body>
+	<input type="text" name="getname" id="field" onchange="loadAjax(this.value)">
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function loadAjax(typedName)
+		{
+		//	alert("hello!");
+			var lm = new XMLHttpRequest();
+		 	lm.open("GET", 'ajax.txt', true);
+		 	lm.send();
+		 	//var name = document.getElementById("field");
+		 	document.getElementById("demo").innerHTML = name;
+		 	lm.onreadystatechange = function(){	
+
+				
+				//otherName.innerHTML = this.responseText;
+				var receivedText=this.responseText
+		 	 	if ( typedName == receivedText)
+		 	 	{
+		 	 		document.getElementById("demo").innerHTML = "is in list";
+		 	 	}
+		 	 	else
+		 	 	{
+		 	 		document.getElementById("demo").innerHTML = "not in list";
+		 	 	}
+		 	 };
+			// xhttp.open("GET", "getcustomer.asp?q="+str, true);
+			// xhttp.send();
+			// if (true)
+			// {
+			// 	document.write("Not in list");				
+			// }
+			// document.write("Yes in list");
+			// document.getElementById('demo').innerHTML;
+		}
+	</script>
+</body>
+</html>

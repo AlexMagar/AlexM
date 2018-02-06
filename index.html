@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EAD</title>
+</head>
+<body>
+	<p id="demo">Demo Content</p>
+	<button onclick="loadAjax(name)">Get Data</button>
+	<script type="text/javascript">
+
+		// function loadAjax(name)
+		// {
+		//  	var lacche = new XMLHttpRequest;
+		//  	var Myname = name;
+		// // 	document.write(Myname);
+		//  	document.getElementById("demo1").innerHTML = Myname;
+		//  	lacche.open("GET", 'ajax.txt', true);
+		//  	lacche.send();
+		//  	lacche.onreadystatechange = function(){
+		// 		document.getElementById("demo").innerHTML = this.responseText;
+		//  	}
+		// }
+		 function loadAjax()
+		 {
+		 	var lacche = new XMLHttpRequest;
+		 	lacche.open("GET", 'ajax.txt', true);
+		 	lacche.send();
+		 	lacche.onreadystatechange = function(){
+		 		if (this.readyState == 4 && this.status == 200) {
+      				document.getElementById("demo").innerHTML = this.responseText;
+		 		//	console.log(this.responseText);
+		 		}
+		 	};
+		}
+	</script>
+</body>
+</html>
