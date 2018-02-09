@@ -1,1 +1,4 @@
 to untrack =  git rm --cached fileName
+to make variable for address
+-git add remote aliasname repo_address
+-git push repo-addresss brance
